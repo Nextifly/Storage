@@ -3,14 +3,16 @@ import DataTitle from '@/ui/text/DataTitle'
 
 const Page = () => {
 	return (
-		<section className='w-[100%-225px]'>
+		<section className='w-[100%]'>
 			<div className='w-full h-[39px] bg-[#38557A] flex items-center pl-[19px]'>
 				<h2 className='text-white font-bold'>Настройка коррекции</h2>
 			</div>
 			<section className='m-4 w-[420px]'>
 				<div className='w-full h-[27px] bg-[#38557A] px-3 flex justify-between items-center'>
 					<h2 className='font-bold text-white'>AI correction</h2>
-					<span className='text-[#E2EAF5] text-[8px]'>Last date of learning : 31.12.2024 Ver.22</span>
+					<span className='text-[#E2EAF5] text-[8px]'>
+						Last date of learning : 31.12.2024 Ver.22
+					</span>
 				</div>
 				<div className='py-2 bg-white'></div>
 				<DataTitle title='PLC_KaraArna:' />
