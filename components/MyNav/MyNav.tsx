@@ -48,11 +48,11 @@ const MyNav = () => {
 
 	return (
 		<nav className='w-[223px] h-full bg-[#38557A] py-2'>
-			<div className='flex justify-start items-center gap-[11px] pl-[12px] mb-5'>
+			<div className='flex items-center gap-[11px] pl-[12px] mb-5'>
 				<Image src={UserIMG} alt='...' className='w-12 h-12' />
 				<h2 className='text-white text-[12px] font-semibold'>{name}</h2>
 			</div>
-			<ul className='bg-white pl-6 pr-3 flex flex-col'>
+			<ul className='bg-[#E2EAF5] pl-6 pr-3 flex flex-col'>
 				<Link
 					href='#'
 					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
