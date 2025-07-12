@@ -3,7 +3,7 @@ import DataTitle from '@/ui/text/DataTitle'
 
 const Page = () => {
 	return (
-		<section className='size-full'>
+		<section className='w-[100%-225px]'>
 			<div className='w-full h-[39px] bg-[#38557A] flex items-center pl-[19px]'>
 				<h2 className='text-white font-bold'>Настройка коррекции</h2>
 			</div>

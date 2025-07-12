@@ -35,7 +35,7 @@ const Page = () => {
 
 	return (
 		<section className='flex justify-center items-center w-full h-full'>
-			<div className='max-w-[482px] w-full h-auto bg-[#E2EAF5] mt-[-39px] shadow-[0px_4px_20px_#7E99BB]'>
+			<div className='max-w-[482px] w-full  bg-[#E2EAF5] mt-[-39px] shadow-[0px_4px_20px_#7E99BB]'>
 				<nav className='w-full flex items-center justify-center'>
 					<AuthLink
 						onClick={setCompany}
