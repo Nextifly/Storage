@@ -7,7 +7,7 @@ import LocationTitle from '@/ui/text/LocationTitle'
 
 const Page = () => {
 	return (
-		<section className='w-[100%]'>
+		<section className='w-[calc(100%-223px)]'>
 			<div className='w-full h-[39px] bg-[#38557A] flex items-center pl-[19px]'>
 				<h2 className='text-white font-bold'>Месторождения</h2>
 			</div>
