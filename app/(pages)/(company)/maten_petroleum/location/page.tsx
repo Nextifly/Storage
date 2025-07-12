@@ -13,18 +13,18 @@ const Page = () => {
 				<h2 className='text-white font-bold'>Месторождения</h2>
 			</div>
 			<section className='flex flex-row gap-6 w-full justify-start items-start m-4'>
-				<div className='bg-white py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
+				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
 					<LocationTitle title='Кара-Арна' />
 					<LocationStorage img={Storage5} />
 					<LocationStorage img={Storage6} />
 					<LocationStorage img={Storage7} />
 				</div>
-				<div className='bg-white py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
+				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
 					<LocationTitle title=' НПС Каратон' />
 					<LocationStorage img={Storage5} />
 					<LocationStorage img={Storage6} />
 				</div>
-				<div className='bg-white py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
+				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col'>
 					<LocationTitle title='ПСиСН Каратон' />
 					<LocationStorage img={Storage5} />
 				</div>
