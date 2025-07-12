@@ -21,8 +21,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='ru' className='w-full h-full'>
-			<body className={`antialiased size-full bg-[#a4b9d4] ${inter.variable}`}>
+		<html lang='ru' className='size-full'>
+			<body className={`antialiased size-full overflow-x-hidden bg-[#a4b9d4] ${inter.variable}`}>
 				<Header />
 				{children}
 				<Toaster />
