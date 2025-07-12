@@ -55,7 +55,7 @@ const MyNav = () => {
 			<ul className='bg-[#E2EAF5] pl-6 pr-3 flex flex-col'>
 				<Link
 					href='#'
-					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D] ${
 						activePage == 'about' && 'font-extrabold'
 					}`}
 				>
@@ -63,7 +63,7 @@ const MyNav = () => {
 				</Link>
 				<Link
 					href={`/${company}/location`}
-					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D] ${
 						activePage == 'location' && 'font-extrabold'
 					}`}
 				>
@@ -71,7 +71,7 @@ const MyNav = () => {
 				</Link>
 				<Link
 					href={`/${company}/data`}
-					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D] ${
 						activePage == 'data' && 'font-extrabold'
 					}`}
 				>
@@ -79,7 +79,7 @@ const MyNav = () => {
 				</Link>
 				<Link
 					href={`/${company}/correction`}
-					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D] ${
 						activePage == 'correction' && 'font-extrabold'
 					}`}
 				>
@@ -87,7 +87,7 @@ const MyNav = () => {
 				</Link>
 				<Link
 					href='#'
-					className={`cursor-pointer h-[31px] flex items-center text-[12px] ${
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D] ${
 						activePage == 'notif' && 'font-bold'
 					}`}
 				>
@@ -95,7 +95,7 @@ const MyNav = () => {
 				</Link>
 				<h2
 					onClick={handleLeave}
-					className={`cursor-pointer h-[31px] flex items-center text-[12px]`}
+					className={`cursor-pointer h-[31px] flex items-center text-[12px] text-[#0D223D]`}
 				>
 					Выход
 				</h2>
