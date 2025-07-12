@@ -21,7 +21,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='ru' className='size-full'>
+		<html lang='ru' className='min-h-full min-w-full size-full overflow-x-hidden'>
 			<body className={`antialiased size-full overflow-x-hidden bg-[#a4b9d4] ${inter.variable}`}>
 				<Header />
 				{children}

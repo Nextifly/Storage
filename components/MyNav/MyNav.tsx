@@ -47,8 +47,8 @@ const MyNav = () => {
 	}
 
 	return (
-		<nav className='w-[223px] bg-[#38557A] py-2'>
-			<div className='flex items-center gap-[11px] pl-[12px] mb-5'>
+		<nav className='w-[223px] bg-[#38557A] py-2 max-[618px]:w-[180px] max-[572px]:w-full'>
+			<div className='flex items-center gap-[11px] pl-[12px] mb-5 max-[572px]:hidden'>
 				<Image src={UserIMG} alt='...' className='w-12 h-12' />
 				<h2 className='text-white text-[12px] font-semibold'>{name}</h2>
 			</div>

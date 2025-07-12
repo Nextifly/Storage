@@ -34,9 +34,9 @@ const Page = () => {
 	}
 
 	return (
-		<section className='flex justify-center items-center w-full h-full'>
-			<div className='max-w-[482px] w-full  bg-[#E2EAF5] mt-[-39px] shadow-[0px_4px_20px_#7E99BB]'>
-				<nav className='w-full flex items-center justify-center'>
+		<section className='flex justify-center items-center size-full'>
+			<div className='max-w-[482px] mx-4 w-full  bg-[#E2EAF5] mt-[-39px] shadow-[0px_4px_20px_#7E99BB]'>
+				<nav className='w-full flex items-center justify-center max-[428px]:flex-col'>
 					<AuthLink
 						onClick={setCompany}
 						name='АО ”Матен Петролеум”'
