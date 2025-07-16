@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 
 interface ITitle {
-	title: string;
+	children: PropsWithChildren<string>
 }
 
-const LocationTitle = ({title}: ITitle) => {
-	return <h2 className='font-bold'>{title}</h2>
+const LocationTitle = ({children}: ITitle) => {
+	return <h2 className='font-bold'>{children}</h2>
 }
 
 export default LocationTitle

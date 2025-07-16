@@ -39,10 +39,9 @@ const Page = () => {
 				<nav className='w-full flex items-center justify-center max-[428px]:flex-col'>
 					<AuthLink
 						onClick={setCompany}
-						name='АО ”Матен Петролеум”'
 						company={company}
-					/>
-					<AuthLink onClick={setCompany} name='АО “КоЖаН”' company={company} />
+					>АО ”Матен Петролеум”</AuthLink>
+					<AuthLink onClick={setCompany} company={company}>АО “КоЖаН”</AuthLink>
 				</nav>
 				<form className='flex flex-col justify-center items-center px-3 my-11'>
 					<AuthInput

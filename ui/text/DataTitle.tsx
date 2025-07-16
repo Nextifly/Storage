@@ -1,11 +1,9 @@
-interface ITitle {
-	title: string
-}
+import { PropsWithChildren } from 'react'
 
-const DataTitle = ({ title }: ITitle) => {
+const DataTitle = ({ children }: {children: PropsWithChildren<string>}) => {
 	return (
 		<div className='w-full h-[27px] bg-[#38557A] px-3'>
-			<h2 className='font-bold text-[#e2eaf5]'>{title}</h2>
+			<h2 className='font-bold text-[#e2eaf5]'>{children}</h2>
 		</div>
 	)
 }

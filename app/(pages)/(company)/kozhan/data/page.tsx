@@ -9,7 +9,7 @@ const Page = () => {
 			</div>
 			<section className='flex flex-col gap-12 m-4'>
 				<div className='max-w-[362px]  bg-[#E2EAF5] flex flex-col gap-[14px] pb-[14px]'>
-					<DataTitle title='SCADA SERVER' />
+					<DataTitle>SCADA SERVER</DataTitle>
 					<h2 className='font-bold px-3'>IP: 192.168.100.242</h2>
 					<h2 className='font-bold px-3'>Password: ● ● ● ● ● ● ● ●</h2>
 					<h2 className='font-bold px-3 flex flex-wrap justify-start items-center gap-[10px]'>
@@ -17,10 +17,10 @@ const Page = () => {
 					</h2>
 				</div>
 				<div className='w-full max-w-[510px] max-[700px]:max-w-[362px] bg-[#E2EAF5] flex flex-col gap-[14px] pb-[14px]'>
-					<DataTitle title='PLC STATUS:' />
+					<DataTitle>PLC STATUS:</DataTitle>
 					<div className='flex flex-wrap gap-20 justify-between items-start max-[768px]:gap-4 '>
 						<div className=' flex flex-col gap-2 w-[215px] max-[700px]:w-full'>
-							<DataTitle title='PLC_Morsk:' />
+							<DataTitle>PLC_Morsk:</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-5: <Status status='CONNECT' />{' '}
 							</h2>
@@ -38,7 +38,7 @@ const Page = () => {
 							</h2>
 						</div>
 						<div className=' flex flex-col gap-2 w-[215px] max-[700px]:w-full'>
-							<DataTitle title='PLC_Karaton_K' />
+							<DataTitle>PLC_Karaton_K</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-1: <Status status='CONNECT' />{' '}
 							</h2>

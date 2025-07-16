@@ -13,14 +13,14 @@ const Page = () => {
 			</div>
 			<section className='flex flex-wrap gap-6 justify-around items-center m-4 max-[1036px]:justify-start'>
 				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4'>
-					<LocationTitle title='ПСиПН Морское' />
+					<LocationTitle>ПСиПН Морское</LocationTitle>
 					<LocationStorage img={Storage5} />
 					<LocationStorage img={Storage6} />
 					<LocationStorage img={Storage7} />
 					<LocationStorage img={Storage8} />
 				</div>
 				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[362px]  gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4'>
-					<LocationTitle title='ПСиСН Каратон' />
+					<LocationTitle>ПСиСН Каратон</LocationTitle>
 					<LocationStorage img={Storage5} />
 					<LocationStorage img={Storage6} />
 					<LocationStorage img={Storage7} />

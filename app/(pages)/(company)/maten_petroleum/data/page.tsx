@@ -9,7 +9,7 @@ const Page = () => {
 			</div>
 			<section className='flex flex-col gap-12 m-4'>
 				<div className='max-w-[362px]  bg-[#E2EAF5] flex flex-col gap-[14px] pb-[14px]'>
-					<DataTitle title='SCADA SERVER' />
+					<DataTitle>SCADA SERVER</DataTitle>
 					<h2 className='font-bold px-3'>IP: 192.168.100.252</h2>
 					<h2 className='font-bold px-3'>Password: ● ● ● ● ● ● ● ●</h2>
 					<h2 className='font-bold px-3 flex flex-wrap justify-start items-center gap-[10px]'>
@@ -17,10 +17,10 @@ const Page = () => {
 					</h2>
 				</div>
 				<div className='w-full max-w-[1100px]  bg-[#E2EAF5] flex flex-col gap-[14px] pb-[14px] max-[670px]:max-w-[362px]'>
-					<DataTitle title='PLC STATUS:' />
+					<DataTitle>PLC STATUS:</DataTitle>
 					<div className='flex flex-wrap gap-20 justify-start items-start max-[670px]:justify-center'>
 						<div className=' flex flex-col gap-2 w-[215px] max-[670px]:w-full'>
-							<DataTitle title='PLC_KaraArna:' />
+							<DataTitle>PLC_KaraArna:</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-2: <Status status='CONNECT' />{' '}
 							</h2>
@@ -35,7 +35,7 @@ const Page = () => {
 							</h2>
 						</div>
 						<div className=' flex flex-col gap-2 w-[215px] max-[670px]:w-full'>
-							<DataTitle title='PLC_Karaton_M' />
+							<DataTitle>PLC_Karaton_M</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-1: <Status status='CONNECT' />{' '}
 							</h2>
@@ -44,13 +44,13 @@ const Page = () => {
 							</h2>
 						</div>
 						<div className=' flex flex-col gap-2 w-[215px] max-[670px]:w-full'>
-							<DataTitle title='PLC_Karaton_K' />
+							<DataTitle>PLC_Karaton_K</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-4: <Status status='CONNECT' />{' '}
 							</h2>
 						</div>
 						<div className=' flex flex-col gap-2 w-[215px] max-[670px]:w-full'>
-							<DataTitle title='PLC_Matin' />
+							<DataTitle>PLC_Matin</DataTitle>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-2: <Status status='DISCONNECT' />{' '}
 							</h2>

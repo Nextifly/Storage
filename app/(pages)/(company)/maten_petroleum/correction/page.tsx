@@ -15,7 +15,7 @@ const Page = () => {
 					</span>
 				</div>
 				<div className='py-2 bg-[#e2eaf5]'></div>
-				<DataTitle title='PLC_KaraArna:' />
+				<DataTitle>PLC_KaraArna:</DataTitle>
 				<div className='py-2 bg-[#e2eaf5] px-3 flex flex-col gap-2'>
 					<div className='flex flex-wrap gap-2 justify-between'>
 						<h2 className='font-bold'>RVS - 2:</h2>
@@ -33,7 +33,7 @@ const Page = () => {
 						<p className='max-[670px]:text-[12px]'>+0,00012</p>
 					</div>
 				</div>
-				<DataTitle title='PLC_Karaton_M' />
+				<DataTitle>PLC_Karaton_M</DataTitle>
 				<div className='py-2 bg-[#e2eaf5] px-3 flex flex-col gap-2'>
 					<div className='flex flex-wrap gap-2 justify-between'>
 						<h2 className='font-bold'>RVS - 1:</h2>
@@ -46,7 +46,7 @@ const Page = () => {
 						<p className='max-[670px]:text-[12px]'>-0,0015</p>
 					</div>
 				</div>
-				<DataTitle title='PLC_Karaton_K' />
+				<DataTitle>PLC_Karaton_K</DataTitle>
 				<div className='py-2 bg-[#e2eaf5] px-3 flex flex-col gap-2'>
 					<div className='flex flex-wrap gap-2 justify-between'>
 						<h2 className='font-bold'>RVS - 4:</h2>
@@ -54,7 +54,7 @@ const Page = () => {
 						<p className='max-[670px]:text-[12px]'>+0,0003</p>
 					</div>
 				</div>
-				<DataTitle title='PLC_Matin' />
+				<DataTitle>PLC_Matin</DataTitle>
 				<div className='py-2 bg-[#e2eaf5] px-3 flex flex-col gap-2'>
 					<div className='flex flex-wrap gap-2 justify-between'>
 						<h2 className='font-bold'>RVS - 2:</h2>
