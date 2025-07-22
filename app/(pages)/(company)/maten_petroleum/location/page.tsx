@@ -1,3 +1,5 @@
+'use client'
+
 import Storage2 from '@/assets/img/storage/PBC-2.png'
 import Storage5 from '@/assets/img/storage/PBC-5.png'
 import Storage5v2 from '@/assets/img/storage/PBC-5v2.png'
@@ -5,8 +7,13 @@ import Storage6 from '@/assets/img/storage/PBC-6.png'
 import Storage7 from '@/assets/img/storage/PBC-7.png'
 import LocationStorage from '@/components/LocationStorage/LocationStorage'
 import LocationTitle from '@/ui/text/LocationTitle'
+import { useEffect } from 'react'
 
 const Page = () => {
+	
+	useEffect(() => {
+		
+	}, [])
 	return (
 		<section className='w-[calc(100%-223px)] max-[618px]:w-[calc(100%-180px)] max-[572px]:w-full'>
 			<div className='w-full h-[39px] bg-[#38557A] flex items-center py-[19px]'>
