@@ -49,6 +49,8 @@ const Page = () => {
 			})
 		}
 		loadData()
+		const intervar = setInterval(loadData, 5000)
+		return () => clearInterval(intervar)
 	}, [])
 	useEffect(() => {
 		const loadData = async () => {
@@ -89,6 +91,8 @@ const Page = () => {
 			})
 		}
 		loadData()
+		const intervar = setInterval(loadData, 5000)
+		return () => clearInterval(intervar)
 	}, [])
 	useEffect(() => {
 		const loadData = async () => {
@@ -112,10 +116,12 @@ const Page = () => {
 					],
 				}),
 			]).then(response => {
-				setKaraArna([{ RVS_2: response[0].data }, { RVS_5: response[1].data }])
+				setMatin([{ RVS_2: response[0].data }, { RVS_5: response[1].data }])
 			})
 		}
 		loadData()
+		const intervar = setInterval(loadData, 5000)
+		return () => clearInterval(intervar)
 	}, [])
 	return (
 		<section className='w-[calc(100%-223px)] max-[618px]:w-[calc(100%-180px)] max-[572px]:w-full'>
