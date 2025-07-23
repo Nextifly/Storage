@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import StorageIMG from '@/assets/img/storage.png'
+import { useEffect } from 'react';
 
 interface IStorage {
 	name: string;
@@ -8,6 +9,12 @@ interface IStorage {
 }
 
 const LocationStorage = ({ name, data, max_volume }: IStorage) => {
+	const StringToNum = (num: string) => {
+		const floatNum = parseFloat(num)
+		if (isNaN(floatNum)) return 0
+		return floatNum.toFixed(3)
+	}
+
 	return (
 		<div className='flex justify-between gap-3 items-end'>
 			<div className="w-[140px] h-25 relative">
@@ -15,7 +22,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 				<div className='absolute bottom-0 left-5 w-[55px]'>
 					<h2 className='font-bold text-[10px] mb-1'>{name}</h2>
 					<div className='relative ml-2 w-[23px] h-[59px] border-[0.5] border-b-1 border-black border-solid'>
-						<div className={`absolute insert-x-0 bottom-0 h-[calc(59px*(${data ? data[2]["value"] : 0}/${max_volume}))] w-full bg-black`} style={{background: "linear-gradient(122.73deg, #534F4F 3.67%, #656060 20.04%, #B9B0B0 38.35%, #656060 58.58%, #534F4F 74.95%, #B9B0B0 91.81%)"}}></div>
+						<div className={`absolute insert-x-0 bottom-0 w-full bg-black`} style={{height: `calc(59px*(${data !== undefined ? StringToNum(data[2]['value']) : 0}/${max_volume || 1}))`,background: "linear-gradient(122.73deg, #534F4F 3.67%, #656060 20.04%, #B9B0B0 38.35%, #656060 58.58%, #534F4F 74.95%, #B9B0B0 91.81%)"}}></div>
 					</div>
 				</div>
 			</div>
@@ -39,7 +46,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 							cm
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
-							{data ? data[0]["value"] : 0}
+							{data !== undefined ? StringToNum(data[0]["value"]) : 0}
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
 							461.738
@@ -50,7 +57,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 							°C
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
-							{data ? data[1]["value"] : 0}
+							{data !== undefined ? StringToNum(data[1]["value"]) : 0}
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
 							-
@@ -61,7 +68,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 							М³
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
-							{data ? data[2]["value"] : 0}
+							{data !== undefined ? StringToNum(data[2]["value"]) : 0}
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
 							827.218
@@ -72,7 +79,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 							TH
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
-							{data ? data[3]["value"] : 0}
+							{data !== undefined ? StringToNum(data[3]["value"]) : 0}
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
 							757,186
@@ -83,7 +90,7 @@ const LocationStorage = ({ name, data, max_volume }: IStorage) => {
 							КГ/М³
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
-							{data ? data[4]["value"] : 0}
+							{data !== undefined ? StringToNum(data[4]["value"]) : 0}
 						</td>
 						<td className='border-1 border-black border-solid text-[9px] w-10 px-[4px] bg-white'>
 							-
