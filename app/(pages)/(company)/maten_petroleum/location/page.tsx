@@ -1,12 +1,5 @@
 'use client'
 
-import {
-	default as Storage2,
-	default as Storage5,
-	default as Storage5v2,
-	default as Storage6,
-	default as Storage7,
-} from '@/assets/img/storage/image.png'
 import LocationStorage from '@/components/LocationStorage/LocationStorage'
 import LocationTitle from '@/ui/text/LocationTitle'
 import { WINCC_API } from '@/utils/WINCC_API'
@@ -21,7 +14,7 @@ const Page = () => {
 		const loadData = async () => {
 			await Promise.all([
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaraArna_RVS_2_Now.Level',
 						'KaraArna_RVS_2_Now.Temp',
 						'KaraArna_RVS_2_Now.Volume',
@@ -30,7 +23,7 @@ const Page = () => {
 					],
 				}),
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaraArna_RVS_8_Now.Level',
 						'KaraArna_RVS_8_Now.Temp',
 						'KaraArna_RVS_8_Now.Volume',
@@ -39,7 +32,7 @@ const Page = () => {
 					],
 				}),
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaraArna_RVS_9_Now.Level',
 						'KaraArna_RVS_9_Now.Temp',
 						'KaraArna_RVS_9_Now.Volume',
@@ -47,8 +40,12 @@ const Page = () => {
 						'KaraArna_RVS_9_Now.Dens',
 					],
 				}),
-			]).then((response) => {
-				setKaraArna([{"RVS_2": response[0].data}, {"RVS_8": response[1].data}, {"RVS_9": response[2].data}])
+			]).then(response => {
+				setKaraArna([
+					{ RVS_2: response[0].data },
+					{ RVS_8: response[1].data },
+					{ RVS_9: response[2].data },
+				])
 			})
 		}
 		loadData()
@@ -57,7 +54,7 @@ const Page = () => {
 		const loadData = async () => {
 			await Promise.all([
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaratM_RVS_1_Now.Level',
 						'KaratM_RVS_1_Now.Temp',
 						'KaratM_RVS_1_Now.Volume',
@@ -66,7 +63,7 @@ const Page = () => {
 					],
 				}),
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaratM_RVS_4_Now.Level',
 						'KaratM_RVS_4_Now.Temp',
 						'KaratM_RVS_4_Now.Volume',
@@ -75,7 +72,7 @@ const Page = () => {
 					],
 				}),
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'KaratM_RVS_5_Now.Level',
 						'KaratM_RVS_5_Now.Temp',
 						'KaratM_RVS_5_Now.Volume',
@@ -83,8 +80,12 @@ const Page = () => {
 						'KaratM_RVS_5_Now.Dens',
 					],
 				}),
-			]).then((response) => {
-				setKaratM([{"RVS_1": response[0].data}, {"RVS_4": response[1].data}, {"RVS_5": response[2].data}])
+			]).then(response => {
+				setKaratM([
+					{ RVS_1: response[0].data },
+					{ RVS_4: response[1].data },
+					{ RVS_5: response[2].data },
+				])
 			})
 		}
 		loadData()
@@ -93,7 +94,7 @@ const Page = () => {
 		const loadData = async () => {
 			await Promise.all([
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'Matin_RVS_2_Now.Level',
 						'Matin_RVS_2_Now.Temp',
 						'Matin_RVS_2_Now.Volume',
@@ -102,7 +103,7 @@ const Page = () => {
 					],
 				}),
 				WINCC_API.post('/tagManagement/values', {
-					variableNamed: [
+					variableNames: [
 						'Matin_RVS_5_Now.Level',
 						'Matin_RVS_5_Now.Temp',
 						'Matin_RVS_5_Now.Volume',
@@ -110,60 +111,63 @@ const Page = () => {
 						'Matin_RVS_5_Now.Dens',
 					],
 				}),
-			]).then((response) => {
-				setKaraArna([{"RVS_2": response[0].data}, {"RVS_5": response[1].data}])
+			]).then(response => {
+				setKaraArna([{ RVS_2: response[0].data }, { RVS_5: response[1].data }])
 			})
 		}
 		loadData()
 	}, [])
 	return (
-    <section className="w-[calc(100%-223px)] max-[618px]:w-[calc(100%-180px)] max-[572px]:w-full">
-      <div className="w-full h-[39px] bg-[#38557A] flex items-center py-[19px]">
-        <h2 className="text-white font-bold max-[572px]:pl-4">Месторождения</h2>
-      </div>
-      <section className="flex gap-8 justify-start items-start m-4 max-[1000px]:gap-2 max-[924px]:block">
-        <div className="bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-w-[362px] w-full  gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4 max-[924px]:mb-3">
-          <LocationTitle>Кара-Арна</LocationTitle>
-          {
-			KaraArna 
-			? 
-			KaraArna.map((rvs) => (
-				<LocationStorage key={"KaraArna"+Object.keys(rvs)[0]} max_volume={1000} name={Object.keys(rvs)[0]} data={rvs[Object.keys(rvs)[0]]}/>
-			))
-			:
-			<LocationStorage max_volume={1000} name="PBC-2" />
-		  }
-        </div>
-        <section>
-          <div className="flex gap-2 justify-start items-start max-[1380px]:max-w-[362px] max-[1380px]:flex-wrap">
-            <div className="bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]  max-w-[362px] w-full   gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4">
-              <LocationTitle>НПС Каратон</LocationTitle>
-              <LocationStorage max_volume={5000} name="PBC-1"/>
-              <LocationStorage max_volume={5000} name="PBC-5"/>
-            </div>
-            <div className="bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]  max-w-[362px] w-full   gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4">
-              <LocationTitle>ПСиСН Каратон</LocationTitle>
-              <LocationStorage max_volume={1000} name="PBC-4" />
-            </div>
-          </div>
-          <section className="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] my-8 bg-[#e2eaf5]  max-w-[661px] py-6 px-9 max-[1380px]:hidden mx-4">
-            <LocationTitle>УПН Матин</LocationTitle>
-            <div className="flex flex-wrap justify-between size-full gap-[30px] mt-10">
-              <LocationStorage max_volume={1000} name="PBC-2" />
-              <LocationStorage max_volume={1000} name="PBC-5" />
-            </div>
-          </section>
-        </section>
-      </section>
-      <section className="shadow-[0px_4px_4px_rgba(0,0,0,0.25)] my-8 bg-[#e2eaf5]  max-w-[661px] py-6 px-9 min-[1380px]:hidden mx-4 max-[1000px]:py-3 max-[1000px]:px-4">
-        <LocationTitle>УПН Матин</LocationTitle>
-        <div className="flex flex-wrap justify-between size-full gap-[30px] mt-10">
-          <LocationStorage max_volume={1000} name="PBC-2" />
-            <LocationStorage max_volume={1000} name="PBC-5" />
-        </div>
-      </section>
-    </section>
-  );
-};
+		<section className='w-[calc(100%-223px)] max-[618px]:w-[calc(100%-180px)] max-[572px]:w-full'>
+			<div className='w-full h-[39px] bg-[#38557A] flex items-center py-[19px]'>
+				<h2 className='text-white font-bold max-[572px]:pl-4'>Месторождения</h2>
+			</div>
+			<section className='flex gap-8 justify-start items-start m-4 max-[1000px]:gap-2 max-[924px]:block'>
+				<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-w-[362px] w-full  gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4 max-[924px]:mb-3'>
+					<LocationTitle>Кара-Арна</LocationTitle>
+					{KaraArna ? (
+						KaraArna.map(rvs => (
+							<LocationStorage
+								key={'KaraArna' + Object.keys(rvs)[0]}
+								max_volume={1000}
+								name={Object.keys(rvs)[0]}
+								data={rvs[Object.keys(rvs)[0]]}
+							/>
+						))
+					) : (
+						<LocationStorage max_volume={1000} name='PBC-2' />
+					)}
+				</div>
+				<section>
+					<div className='flex gap-2 justify-start items-start max-[1380px]:max-w-[362px] max-[1380px]:flex-wrap'>
+						<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]  max-w-[362px] w-full   gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4'>
+							<LocationTitle>НПС Каратон</LocationTitle>
+							<LocationStorage max_volume={5000} name='PBC-1' />
+							<LocationStorage max_volume={5000} name='PBC-5' />
+						</div>
+						<div className='bg-[#e2eaf5] py-6 px-9 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]  max-w-[362px] w-full   gap-[30px] flex flex-col max-[1000px]:py-3 max-[1000px]:px-4'>
+							<LocationTitle>ПСиСН Каратон</LocationTitle>
+							<LocationStorage max_volume={1000} name='PBC-4' />
+						</div>
+					</div>
+					<section className='shadow-[0px_4px_4px_rgba(0,0,0,0.25)] my-8 bg-[#e2eaf5]  max-w-[661px] py-6 px-9 max-[1380px]:hidden mx-4'>
+						<LocationTitle>УПН Матин</LocationTitle>
+						<div className='flex flex-wrap justify-between size-full gap-[30px] mt-10'>
+							<LocationStorage max_volume={1000} name='PBC-2' />
+							<LocationStorage max_volume={1000} name='PBC-5' />
+						</div>
+					</section>
+				</section>
+			</section>
+			<section className='shadow-[0px_4px_4px_rgba(0,0,0,0.25)] my-8 bg-[#e2eaf5]  max-w-[661px] py-6 px-9 min-[1380px]:hidden mx-4 max-[1000px]:py-3 max-[1000px]:px-4'>
+				<LocationTitle>УПН Матин</LocationTitle>
+				<div className='flex flex-wrap justify-between size-full gap-[30px] mt-10'>
+					<LocationStorage max_volume={1000} name='PBC-2' />
+					<LocationStorage max_volume={1000} name='PBC-5' />
+				</div>
+			</section>
+		</section>
+	)
+}
 
-export default Page;
+export default Page
