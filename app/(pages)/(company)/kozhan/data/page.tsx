@@ -33,9 +33,6 @@ const Page = () => {
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-8: <Status status='CONNECT' />{' '}
 							</h2>
-							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
-								FIT1: <Status status='CONNECT' />{' '}
-							</h2>
 						</div>
 						<div className=' flex flex-col gap-2 w-[215px] max-[700px]:w-full'>
 							<DataTitle>PLC_Karaton_K</DataTitle>
@@ -43,13 +40,10 @@ const Page = () => {
 								PVS-1: <Status status='CONNECT' />{' '}
 							</h2>
 							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
-								PVS-2: <Status status='CONNECT' />{' '}
-							</h2>
-							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
-								PVS-3: <Status status='CONNECT' />{' '}
-							</h2>
-							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
 								PVS-4: <Status status='CONNECT' />{' '}
+							</h2>
+							<h2 className='font-bold px-3 flex flex-wrap justify-between items-center gap-[10px]'>
+								PVS-5: <Status status='CONNECT' />{' '}
 							</h2>
 						</div>
 					</div>
