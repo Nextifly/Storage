@@ -6,7 +6,7 @@ const agent = new https.Agent({
 });
 
 export const WINCC_API = axios.create({
-    url: process.env.NEXT_PUBLIC_API_URL,
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
     httpAgent: agent,
     auth: {
         username: process.env.NEXT_PUBLIC_WINCC_LOGIN || "",
